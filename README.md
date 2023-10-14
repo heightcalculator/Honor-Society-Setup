@@ -200,9 +200,10 @@ function teacherEmail() {
 
   const sheet = SpreadsheetApp.getActiveSpreadsheet();
   SpreadsheetApp.setActiveSheet(sheet.getSheetByName('Send Email'));
-  const formRange = sheet.getRange("A2:C1000");
+  const lastRow = parseInt(sheet.getLastRow());
+  const formRange = sheet.getRange(`A2:C${lastRow}`);
   const formData = formRange.getValues();
-  const sentRange = sheet.getRange("D2:D1000");
+  const sentRange = sheet.getRange(`D2:D${lastRow}`);
   const sentData = sentRange.getValues();
   console.log("Data collected");
 
