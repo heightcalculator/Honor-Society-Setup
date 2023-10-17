@@ -1,12 +1,12 @@
 # Teacher-Email-Send
-If a teacher wants to hold a club meeting during ROAR, he/she can have the student fill out a google form which the student can simply fill out and the email is sent automatically to the student's teacher.
+If a teacher wants to hold a club meeting during ROAR, he/she can have the student fill out a google form which the student can simply fill out and the email is sent automatically to the student's teacher. If you need help setting this up or if you need help troubleshooting, feel free to contact Aarush Lanjharia!
 
 Create a new google form that asks for 2 entries. The first entry should be a short response input that asks for student's name. The second entry should be a dropdown that allows the student to select their Roar teacher's name.
 
 ![Screenshot 2023-10-12 8 14 49 PM](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/37b526aa-076d-42c2-98d4-022add968a57)
 
 
-The list of the names of all the teachers at Dunwoody High School is below. Just copy the whole list from below and paste it into the first choice of the dropdown:
+The list of the names of all the teachers at Dunwoody High School for the 2023-2024 school year is below. Just copy the whole list from below and paste it into the first choice of the dropdown and it should automatically put each name on it's individual dropdown choice:
 
 ```
 Rose Abraham
@@ -173,7 +173,7 @@ You can either create a whole new google sheet or link it to an existing sheet. 
 ![Screenshot 2023-10-12 8 12 15 PM](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/72aeca43-7d89-49de-a580-18c5f4d651c5)
 
 
-Column A of this sheet should be Timestamps, Column B should be Student Name and Column C should be teacher name. If this is not the order they are in right now, drag the columns around until they are in this order. 
+Column A of this sheet should be Timestamps, Column B should be Student Name and Column C should be teacher name. If this is not the order they are in right now, drag the columns around until they are in this order. (Note: these titles do not have to be exactly as they appear in this example. The code will still work if you have different names for these 3 titles. The columns do need to be in this general order however)
 
 For Column D, create a new title that says "Email Sent". 
 
@@ -420,7 +420,7 @@ After that, click Ctrl+S on your keyboard. Then, create a new file. Select HTML.
 ![Screenshot 2023-10-12 8 22 26 PM](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/944c75f7-b942-421b-b9f6-9223fcf455f6)
 
 
-Then replace all the code there with the code below:
+Then replace all the code there with the code below (This is the content of the actual email itself):
 
 ```html
 Good Morning, <br>
@@ -431,7 +431,10 @@ Teacher Name
 ```
 
 You can edit the content of the email above. `<br>` specifies a line break (enter by itself does not create a new line. You have to use `<br>`). `<?=studentName?>` just gets the student name. So type that wherever you want the student name to come up in the email.
-After you are satisfied with it, click Ctrl+S on your keyboard again to save your work.
+
+If you are tech-savvy or have any tech-savvy students in your class who know HTML/CSS, you can have them design a much cooler looking email but this will still do the basic job!
+
+After you are satisfied with this section, click Ctrl+S on your keyboard again to save your work.
 
 Now we are almost done! We have done all the hard work. Now we just need the code to run every time someone submits the google form! To do that, on the very left of the screen, click on the symbol that looks like a stopwatch. If you hover over it, it should say "Triggers".
 
